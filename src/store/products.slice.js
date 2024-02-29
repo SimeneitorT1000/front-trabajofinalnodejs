@@ -33,7 +33,7 @@ export const getProductsThunk = () => (dispatch) => {
 
 export const filterByCategoryThunk = categoryId => (dispatch) => {
     dispatch(request(async() => {
-        const res = await axios().get(`/products?category=${categoryId}`);
+        const res = await axios().get(`/products?categoryId=${categoryId}`);
         dispatch(setFilteredProducts(res.data));
     }))
 }
